@@ -1,0 +1,59 @@
+# Project StudentDataAPI with Sequelize
+
+**Author:** Mohammad Ahsan Nazmul
+**Date:** November 21, 2023
+
+## Description
+
+This project is StudentData system built using Node.js, Express, and Sequelize for interacting with a SQLite database. It allows you to manage student information and their contacts.
+
+## Prerequisites
+
+Before running the project, ensure you have the following installed:
+
+- [Node.js](https://nodejs.org/)
+- [npm](https://www.npmjs.com/)
+
+## Installation
+Using terminal
+
+1. Navigate to the project directory:
+- cd project
+
+2. Install dependencies:
+- npm install
+
+## Database Setup
+This project uses SQLite as the database. The database file is named 'database.db'.
+
+## Running the Server
+To start the server, run:
+- node SeqlizeServer.js
+
+The server will be running at http://localhost:8091.
+
+# API Endpoints
+Use any client to fetch the data(web browser for GET and POSTMAN for Other API call)
+
+## Student Table
+GET /students: Get all students.
+GET /students/:id: Get student by ID.
+GET /students-query: Get student by firstname and lastname.
+POST /students: Create a new student.
+DELETE /students/:id: Delete student by ID.
+PUT /students/:id: Update a student's information by ID.
+
+## Student Contact Table
+GET /student_contacts: Get all student contacts.
+GET /student_contacts/query: Get student contact by mobile number.
+GET /student_contacts/:id: Get student contact by ID.
+
+## Joining Tables
+GET /students-with-contacts/:id: Get student information along with contact details by student ID.
+
+
+# Closing the Server
+To gracefully close the server, press Ctrl+C in the terminal. This will also close the database connection.
+
+# License
+This project is licensed under the ISC License. Feel free to modify
