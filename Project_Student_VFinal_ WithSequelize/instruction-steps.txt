@@ -1,0 +1,15 @@
+to run:
+- node server.js 
+- node SeqlizeServer.js (for sequelize version)
+cd projrct folder
+    npm init    #except defaults parameters
+install dependecy:
+    npm install --save express     # Updates package.json::dependencies
+    npm install --save body-parser # POST method
+    npm install --global express-generator
+    npm install --save sqlite3
+    npm install --save md5
+
+install Sequelize and sqlite3
+- npm install sequelize sqlite3
+

@@ -1,0 +1,87 @@
+GET http://localhost:8090/students
+###
+GET http://localhost:8090/students/1
+###
+GET http://localhost:8090/students-query?firstname=John&lastname=Doe
+###
+//curl --silent --include -X POST -H "Content-Type: application/json" -d '{"studentid": 6, "firstname": "New", "lastname": "Student", "dateofbirth": "2004-06-06", "grade": 3, "gender": "Male"}' "http://localhost:8090/students"
+POST http://localhost:8090/students
+Content-Type: application/json
+
+{
+    "studentid": 6, 
+    "firstname": "New", 
+    "lastname": "Student", 
+    "dateofbirth": "2004-06-06", 
+    "grade": 3, 
+    "gender": "Male"
+}
+###
+DELETE http://localhost:8090/students/2
+###
+
+//--------------student_contacts----------------
+GET http://localhost:8090/student_contacts
+###
+GET http://localhost:8090/student_contacts/1
+###
+GET http://localhost:8090/student_contacts/query?mobile=5555555555
+###
+
+
+//------------------------------------------------------------------
+//----------------------------Sequlize HTTP METHODS-----------------
+//------------------------------------------------------------------
+
+
+//----------by joining two tables ------------
+GET http://localhost:8091/students-with-contacts/1
+//curl http://localhost:8091/students-with-contacts/1
+
+//-------------------------------------------------
+###
+GET http://localhost:8091/students
+###
+GET http://localhost:8091/students/1
+###
+GET http://localhost:8091/students-query?firstname=John
+###
+
+
+//curl --silent --include -X POST -H "Content-Type: application/json" -d '{"studentid": 6, "firstname": "New", "lastname": "Student", "dateofbirth": "2004-06-06", "grade": 3, "gender": "Male"}' "http://localhost:8090/students"
+POST http://localhost:8091/students
+Content-Type: application/json
+
+{
+    "studentid": 6, 
+    "firstname": "New", 
+    "lastname": "Student", 
+    "dateofbirth": "2004-06-06", 
+    "grade": 3, 
+    "gender": "Male"
+}
+###
+DELETE http://localhost:8091/students/2
+###
+
+//curl -X PUT -H "Content-Type: application/json" -d '{"firstname": "UpdatedFirstName", "lastname": "UpdatedLastName", "dateofbirth": "2000-01-01", "grade": 6, "gender": "Male"}' http://localhost:8091/students/1
+PUT http://localhost:8091/students/1
+Content-Type: application/json
+
+    {
+        "firstname": "UpdatedFirstName",
+        "lastname": "UpdatedLastName", 
+        "dateofbirth": "2000-01-01", 
+        "grade": 6, 
+        "gender": "Male"
+    }
+
+###
+//--------------student_contacts----------------
+GET http://localhost:8091/student_contacts
+###
+GET http://localhost:8091/student_contacts/1
+###
+GET http://localhost:8091/student_contacts/query?mobile=5555555555
+
+
